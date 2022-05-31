@@ -46,6 +46,7 @@ namespace AtelierApp.UI
                 textileCost = 0;
                 serviceCost = 0;
                 newOrder = 1;
+                
             }
             if (rbNotCompleted.IsChecked == true)
             {
