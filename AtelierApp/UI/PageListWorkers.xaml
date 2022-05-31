@@ -1,0 +1,56 @@
+﻿<Page x:Class="AtelierApp.UI.PageListWorkers"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AtelierApp.UI"
+      xmlns:uc="clr-namespace:AtelierApp.UC"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageListWorkers" Loaded="Page_Loaded">
+
+    <Grid>
+        <TextBlock Text="Сортировка:" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30 55 10 10"/>
+        <ComboBox Name="cmbSort" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="130 50 10 10" Width="205" Height="30" 
+                  SelectionChanged="cmbSort_SelectionChanged" SelectedIndex="0" VerticalContentAlignment="Center">
+            <TextBlock Text="По умолчанию" FontSize="14"/>
+            <TextBlock Text="По ФИО" FontSize="14"/>
+        </ComboBox>
+        <TextBlock Text="Должность:" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="355 55 10 10"/>
+        <ComboBox Name="cmbFilter" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="450 50 10 10" Width="205" Height="30" 
+                  SelectionChanged="cmbFilter_SelectionChanged" SelectedIndex="0" VerticalContentAlignment="Center">
+            <TextBlock Text="По умолчанию (все)" FontSize="14"/>
+            <TextBlock Text="Директор" FontSize="14"/>
+            <TextBlock Text="Портной" FontSize="14"/>
+            <TextBlock Text="Администратор" FontSize="14"/>
+        </ComboBox>
+        <TextBlock Text="Поиск по ФИО:" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10 15 10 10" FontSize="14"/>
+        <TextBox Name="tbSearch" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="130 10 10 10" TextChanged="tbSearch_TextChanged" VerticalContentAlignment="Center" Width="525"></TextBox>
+        <DataGrid Name="DGridWorkers" AutoGenerateColumns="False" Background="Transparent"
+                  MinWidth="760" Height="auto" VerticalAlignment="Top" HorizontalAlignment="Center" MinColumnWidth="740"
+                  RowHeight="70" IsReadOnly="True" Margin="10 95 10 45" HorizontalContentAlignment="Center" HeadersVisibility="Column" CanUserAddRows="False">
+            <DataGrid.RowHeaderStyle>
+                <Style TargetType="DataGridRowHeader">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate/>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DataGrid.RowHeaderStyle>
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <uc:ControlWorker/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock Name="tblNoResult" Text="Нет результатов"
+                   VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Visibility="Hidden"/>
+        <Button Name="btnDelete" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Удалить сотрудника" Click="btnDelete_Click"/>
+        <Button Name="btnAdd" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5 5 200 5" Content="Добавить сотрудника" Click="btnAdd_Click"/>
+    </Grid>
+</Page>

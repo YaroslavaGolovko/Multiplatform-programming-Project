@@ -1,0 +1,72 @@
+﻿<Page x:Class="AtelierApp.UI.PageOrder"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AtelierApp.UI"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageOrder" Loaded="Page_Loaded">
+
+    <Grid>
+        <TextBlock Text="Клиент:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 50 10 10" FontSize="20"/>
+        <ComboBox Name="cbClients" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140 45 10 10" FontSize="14"
+                  Width="270" Height="30" SelectedItem="{Binding Client}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                <Run Text="{Binding LastName}" />
+                <Run Text=" "/>
+                <Run Text="{Binding FirstName}" />
+                <Run Text=" "/>
+                <Run Text="{Binding Patronymic}" />
+                    </TextBlock>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <TextBlock Text="Портной:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 120 10 10" FontSize="20"/>
+        <ComboBox Name="cbWorkers" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140 115 10 10" FontSize="14"
+                  Width="270" Height="30" SelectedItem="{Binding Worker}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                <Run Text="{Binding LastName}" />
+                <Run Text=" "/>
+                <Run Text="{Binding FirstName}" />
+                <Run Text=" "/>
+                <Run Text="{Binding Patronymic}" />
+                    </TextBlock>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+        <TextBlock Text="Ткань:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 190 10 10" FontSize="20"/>
+        <ComboBox Name="cbTextile" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140 185 10 10" FontSize="14"
+                  Width="270" Height="30" SelectedItem="{Binding Textile}" DisplayMemberPath="Title" SelectionChanged="CbTextile_SelectionChanged"/>
+        <TextBlock Text="Услуга:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 260 10 10" FontSize="20"/>
+        <ComboBox Name="cbService" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="140 255 10 10" FontSize="14"
+                  Width="270" Height="30" SelectedItem="{Binding Service}" DisplayMemberPath="Title" SelectionChanged="CbService_SelectionChanged"/>
+        <Image Name="imageOrder"  HorizontalAlignment="Right" VerticalAlignment="Top" Stretch="Fill" Width="300" Height="240" Margin="10 45 40 10">
+            <Image.Source>
+                <Binding Path="Image">
+                    <Binding.TargetNullValue>
+                        <ImageSource>/AtelierApp;component/Resources/default.jpg</ImageSource>
+                    </Binding.TargetNullValue>
+                </Binding>
+            </Image.Source>
+        </Image>
+        <Border BorderThickness="2" BorderBrush="#FFBD86AB" HorizontalAlignment="Right" VerticalAlignment="Top" Width="300" Height="240"
+                Margin="10 45 40 10" Panel.ZIndex="1"/>
+        <RadioButton Name="rbCompleted" VerticalAlignment="Top" HorizontalAlignment="Left" Width="175" Margin="10 330 10 10" Checked="RbCompleted_Checked"
+                     Content="Выполнен" FontSize="20" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"/>
+        <RadioButton Name="rbNotCompleted" VerticalAlignment="Top" HorizontalAlignment="Left" Width="175" Margin="10 370 10 10" Checked="RbNotCompleted_Checked"
+                     Content="Не выполнен" FontSize="20" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" IsChecked="True"/>
+        <TextBlock Name="tblCompletionDate" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="470 345 10 10" FontSize="20">
+            <Run Text="Дата выдачи: "/><Run Text="{Binding CompletionDate, StringFormat='{}{0:MM/dd/yyyy}'}" Name="textcompletionDate"/></TextBlock>
+        <TextBlock Name="tblPrice"  VerticalAlignment="Top" HorizontalAlignment="Left" Margin="200 345 10 10" FontSize="20">
+            <Run Text="Стоимость: "/><Run Text="{Binding Price, StringFormat={}{0:0.00}}" Name="textPrice"/><Run Text=" руб."/></TextBlock>
+        <Button Name="btnSelectImage" Content="Выбрать фото" HorizontalAlignment="Right" VerticalAlignment="Bottom" 
+                Margin="5 5 200 5" Click="BtnSelectImage_Click"/>
+        <Button Name="btnSave" Content="Сохранить" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="BtnSave_Click"/>
+        <TextBlock Name="textDate" Grid.Column="2" Text="{Binding RegistrationDate, StringFormat='{}{0:MM/dd/yyyy}'}" Visibility="Hidden"/>
+    </Grid>
+</Page>

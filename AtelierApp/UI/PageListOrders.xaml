@@ -1,0 +1,56 @@
+﻿<Page x:Class="AtelierApp.UI.PageListOrders"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AtelierApp.UI"
+      xmlns:uc="clr-namespace:AtelierApp.UC"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageListOrders" Loaded="Page_Loaded">
+
+    <Grid>
+        <TextBlock Text="Статус заказа:" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10 15 10 10"/>
+        <ComboBox Name="cmbFilter" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="110 10 10 10" Height="30" Width="175" SelectionChanged="cmbFilter_SelectionChanged" SelectedIndex="0" VerticalContentAlignment="Center">
+            <TextBlock Name="tblAll" Text="Все заказы" FontSize="14"/>
+            <TextBlock Name="tblCompleted" Text="Выполненные заказы" FontSize="14"/>
+            <TextBlock Name="tblNotCompleted" Text="Заказы в процессе" FontSize="14"/>
+        </ComboBox>
+        <TextBlock Text="Сортировка:" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="300 15 10 10"/>
+        <ComboBox Name="cmbSort" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="390 10 10 10" Height="30" Width="175" SelectionChanged="cmbSort_SelectionChanged" SelectedIndex="0" VerticalContentAlignment="Center">
+            <TextBlock Name="tblDefault" Text="По умолчанию" FontSize="14"/>
+            <TextBlock Name="tblDate" Text="По дате" FontSize="14"/>
+            <TextBlock Name="tblPrice" Text="По цене" FontSize="14"/>
+        </ComboBox>
+        <TextBlock Text="Поиск по услуге:" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10 65 10 10" FontSize="14"/>
+        <TextBox Name="tbSearch" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="130 60 10 10" TextChanged="tbSearch_TextChanged" ToolTip="Введите наименование услуги, например, пошив блузки" VerticalContentAlignment="Center" Height="30" Width="435"></TextBox>
+        <DataGrid Name="DGridOrders" AutoGenerateColumns="False" 
+                  MinWidth="760" Height="auto" VerticalAlignment="Top" HorizontalAlignment="Center" Background="Transparent" MinColumnWidth="740"
+                  RowHeight="150" IsReadOnly="True" Margin="10 110 10 50" HorizontalContentAlignment="Center" HeadersVisibility="Column" CanUserAddRows="False">
+            <DataGrid.RowHeaderStyle>
+                <Style TargetType="DataGridRowHeader">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate/>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </DataGrid.RowHeaderStyle>
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <uc:ControlOrder/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBlock Name="tblNoResult" Text="Нет результатов"
+                   VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Visibility="Hidden"/>
+        <Button Name="btnDelete" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Удалить заказ" Click="btnDelete_Click"/>
+        <Button Name="btnAdd" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5 5 200 5" Content="Добавить заказ" Click="btnAdd_Click"/>
+        <Button Name="btnCreateReport" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5 5 400 5" Content="Сформировать отчет" Click="btnCreateReport_Click"/>
+
+    </Grid>
+</Page>
