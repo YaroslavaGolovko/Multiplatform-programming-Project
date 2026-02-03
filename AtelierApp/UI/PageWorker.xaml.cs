@@ -63,6 +63,12 @@ namespace AtelierApp.UI
             }
             if (_currentWorker.Id == 0)
             {
+                if (_currentWorker.IdType == 3)
+                {
+                    if(!Authorization.CheckPassword(tbPassword.Text))
+                        MessageBox.Show("Введенный пароль не соотвествует требованиям!", "Требуется изменить пароль", MessageBoxButton.OK, MessageBoxImage.Information);
+                    return;
+                }
                 AtelierBaseEntities.GetContext().Worker.Add(_currentWorker);
             }
 
@@ -108,6 +114,7 @@ namespace AtelierApp.UI
                 tblPassword.Visibility = Visibility.Hidden;
             }
             Manager.BtnBack.Visibility = Visibility.Visible;
+            tbFirstName.Focus();
         }
 
         private void rbDirector_Click(object sender, RoutedEventArgs e)

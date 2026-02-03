@@ -1,0 +1,12 @@
+D:\004_06\AtelierApp\Services\bin\Debug\Services.dll
+D:\004_06\AtelierApp\Services\bin\Debug\Services.pdb
+D:\004_06\AtelierApp\Services\obj\Debug\Services.csproj.CoreCompileInputs.cache
+D:\004_06\AtelierApp\Services\obj\Debug\Services.dll
+D:\004_06\AtelierApp\Services\obj\Debug\Services.pdb
+D:\004_06\AtelierApp\Services\obj\Debug\Services.csproj.AssemblyReference.cache
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\Services\bin\Debug\Services.dll
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\Services\bin\Debug\Services.pdb
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\Services\obj\Debug\Services.csproj.AssemblyReference.cache
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\Services\obj\Debug\Services.csproj.CoreCompileInputs.cache
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\Services\obj\Debug\Services.dll
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\Services\obj\Debug\Services.pdb

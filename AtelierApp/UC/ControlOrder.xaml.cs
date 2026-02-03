@@ -15,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace AtelierApp.UC
 {
@@ -39,10 +40,6 @@ namespace AtelierApp.UC
             return order;
         }
 
-        private void btnCreateCheck_Click(object sender, RoutedEventArgs e)
-        {
-            Services.Manager.ShowMessage();
-        }
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
             Manager.MainFrame.Navigate(new PageOrder((sender as Button).DataContext as Order));

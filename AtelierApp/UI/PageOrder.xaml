@@ -67,6 +67,9 @@
         <Button Name="btnSelectImage" Content="Выбрать фото" HorizontalAlignment="Right" VerticalAlignment="Bottom" 
                 Margin="5 5 200 5" Click="BtnSelectImage_Click"/>
         <Button Name="btnSave" Content="Сохранить" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="BtnSave_Click"/>
+        <Button Name="btnAddClient" Content="Добавить клиента" HorizontalAlignment="Right" VerticalAlignment="Bottom" 
+                Margin="5 5 400 5" Click="btnAddClient_Click"/>
+        
         <TextBlock Name="textDate" Grid.Column="2" Text="{Binding RegistrationDate, StringFormat='{}{0:MM/dd/yyyy}'}" Visibility="Hidden"/>
     </Grid>
 </Page>

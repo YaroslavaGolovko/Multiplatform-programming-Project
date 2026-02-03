@@ -62,5 +62,20 @@ namespace Services
             }
             return result;
         }
+        public static bool CheckPassword(string password)
+        {
+            if (password.Length < 8)
+                return false;
+            if (password.Any(Char.IsLower) == false)
+                return false;
+            if (password.Any(Char.IsUpper) == false)
+                return false;
+            if (password.Any(Char.IsDigit) == false)
+                return false;
+            if (password.Intersect(".,!_$&").Count() == 0)
+                return false;
+
+            return true;
+        }
     }
 }

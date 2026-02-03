@@ -1,5 +1,6 @@
 ﻿using AtelierApp.Data;
 using AtelierApp.UI;
+using Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,19 +27,19 @@ namespace AtelierApp
         {
             InitializeComponent();
             this.FontFamily = new FontFamily("Cambria");
-            Services.Manager.MainFrame = MainFrame;
-            Services.Manager.MainTextBlock = MainTextBlock;
+            Manager.MainFrame = MainFrame;
+            Manager.MainTextBlock = MainTextBlock;
             tbLogin.Focus();
         }
 
         private void BtnEnter_Click(object sender, RoutedEventArgs e)
         {
-            Services.Authorization.userLogin = tbLogin.Text;
+            Authorization.userLogin = tbLogin.Text;
             IEnumerable<string> logins = AtelierBaseEntities.GetContext().Worker.Select(user => user.Login).ToList();
             IEnumerable<string> passwords = AtelierBaseEntities.GetContext().Worker.Where(user => user.Login == tbLogin.Text).Select(user => user.Password).ToList();
             if (pbPassword.Visibility == Visibility.Visible)
             {
-                if (Services.Authorization.CheckEnter(tbLogin.Text, logins, pbPassword.Password, passwords))
+                if (Authorization.CheckEnter(tbLogin.Text, logins, pbPassword.Password, passwords))
                 {
                     WindowWork windowWork = new WindowWork();
                     windowWork.Show();
@@ -46,7 +47,7 @@ namespace AtelierApp
                 }
             }
             else if (tbPassword.Visibility == Visibility.Visible)
-                if (Services.Authorization.CheckEnter(tbLogin.Text, logins, tbPassword.Text, passwords))
+                if (Authorization.CheckEnter(tbLogin.Text, logins, tbPassword.Text, passwords))
                 {
                     WindowWork windowWork = new WindowWork();
                     windowWork.Show();

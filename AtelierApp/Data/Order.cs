@@ -16,11 +16,11 @@ namespace AtelierApp.Data
     {
         public int Id { get; set; }
         public int IdClient { get; set; }
-        public int IdWorker { get; set; }
         public int IdService { get; set; }
-        public int IdTextile { get; set; }
         public System.DateTime RegistrationDate { get; set; }
         public Nullable<System.DateTime> CompletionDate { get; set; }
+        public int IdWorker { get; set; }
+        public int IdTextile { get; set; }
         public decimal Price { get; set; }
         public bool IsCompleted { get; set; }
         public byte[] Image { get; set; }

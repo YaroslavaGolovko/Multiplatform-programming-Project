@@ -15,7 +15,7 @@
         <Grid Grid.Row="2" Background="#FFD6BDD5"/>
         <Grid Background="#ffd6bdce"/>
         <TextBlock Name="MainTextBlock" Text="Рада Best" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" FontFamily="Cambria"/>
-        <Image Margin="5 5 5 5" HorizontalAlignment="Left" Source="/AtelierApp;component/Resources/logo.png" Height="50" Width="50"/>
+        <Image Margin="5 5 5 5" HorizontalAlignment="Left" Source="/Resources/logo.png" Height="50" Width="50"/>
         <Frame Name="MainFrame" Grid.Row="1"  NavigationUIVisibility="Hidden"></Frame>
         <Grid Grid.Row="1">
             <TextBlock Text="Введите логин:" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0 40 0 0" FontSize="20"/>

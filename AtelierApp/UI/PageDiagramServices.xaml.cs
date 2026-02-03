@@ -49,6 +49,10 @@ namespace AtelierApp.UI
 
         private void DateStart_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (dateEnd.SelectedDate < dateStart.SelectedDate)
+            {
+                MessageBox.Show("Вы не можете задать начало периода позже окончания периода!", "Необходимо изменить даты", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
             UpdateChart();
             Manager.MainTextBlock.Text = "Популярные услуги с " + dateStart.SelectedDate.GetValueOrDefault().ToString("MM/dd/yyyy") +
                 " по " + dateEnd.SelectedDate.GetValueOrDefault().ToString("MM/dd/yyyy");
@@ -56,6 +60,10 @@ namespace AtelierApp.UI
 
         private void DateEnd_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
+            if (dateEnd.SelectedDate < dateStart.SelectedDate)
+            {
+                MessageBox.Show("Вы не можете задать начало периода позже окончания периода!", "Необходимо изменить даты", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
             UpdateChart();
             Manager.MainTextBlock.Text = "Популярные услуги с " + dateStart.SelectedDate.GetValueOrDefault().ToString("MM/dd/yyyy") +
                 " по " + dateEnd.SelectedDate.GetValueOrDefault().ToString("MM/dd/yyyy");

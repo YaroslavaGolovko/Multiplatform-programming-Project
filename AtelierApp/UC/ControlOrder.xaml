@@ -19,14 +19,13 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Column="1" Text="Заказ за" HorizontalAlignment="Right" Margin="5" FontSize="16" VerticalAlignment="Center"/>
-        <TextBlock Grid.Column="2" Text="{Binding RegistrationDate, StringFormat='{}{0:MM/dd/yyyy}'}" HorizontalAlignment="Left" Margin="5" FontSize="16" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="2" Name="regText" Text="{Binding RegistrationDate, StringFormat='{}{0:MM/dd/yyyy}'}" HorizontalAlignment="Left" Margin="5" FontSize="16" VerticalAlignment="Center"/>
         <TextBlock Style="{StaticResource TextBlockTrigger}" Grid.Column="2" HorizontalAlignment="Left" Margin="100 5 5 5" FontSize="16" VerticalAlignment="Center">
-            <Run Text="(выдан: "/><Run Text="{Binding CompletionDate, StringFormat='{}{0:MM/dd/yyyy}'}"/><Run Text=" )"/></TextBlock>
+            <Run Text="(выдан: "/><Run Name="finalText" Text="{Binding CompletionDate, StringFormat='{}{0:MM/dd/yyyy}'}"/><Run Text=" )"/></TextBlock>
         <TextBlock Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Margin="5" FontSize="16" VerticalAlignment="Center"><Run Text="{Binding Client.LastName}"/><Run Text=" "/><Run Text="{Binding Client.FirstName}"/></TextBlock>
         <TextBlock Grid.Column="2" Grid.Row="1" Text="{Binding Service.Title}" HorizontalAlignment="Left" Margin="5" FontSize="16" VerticalAlignment="Center"></TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="150 5 5 5" FontSize="14" VerticalAlignment="Center"><Run Text="Цена: "/><Run Text="{Binding Price, StringFormat={}{0:0.00}}"/><Run Text=" руб."/></TextBlock>
-        <Button Name="btnUpdate" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Редактировать" Click="btnUpdate_Click"/>
-        <Button Name="btnCreateCheck" Grid.Column="2" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Left" Content="Сформировать чек" Click="btnCreateCheck_Click"/>
+        <TextBlock Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="150 5 5 5" FontSize="14" VerticalAlignment="Center"><Run Text="Цена: "/><Run Name="costText" Text="{Binding Price, StringFormat={}{0:0.00}}"/><Run Text=" руб."/></TextBlock>
+        <Button Name="btnUpdate" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Редактировать" Click="btnUpdate_Click"/>
         <Border Grid.RowSpan="4" Grid.Column="0" BorderThickness="2" BorderBrush="#FFBD86AB"/>
         <Image Grid.RowSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Fill"  Panel.ZIndex="-1">
             <Image.Source>

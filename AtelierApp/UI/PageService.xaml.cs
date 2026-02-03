@@ -42,19 +42,20 @@ namespace AtelierApp.UI
                 Manager.MainTextBlock.Text = "Новая услуга";
             Manager.BtnBack.Visibility = Visibility.Visible;
             tbCost.Text = (Math.Round(_currentService.Cost)).ToString();
+            tbName.Focus();
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
-            StringBuilder errors = new StringBuilder();
-            if (tbName.Text.Length == 0)
-                errors.AppendLine("Необходимо указать название услуги");
-            if (tbCost.Text.Length == 0)
-                errors.AppendLine("Необходимо указать стоимость услуги");
+            SaveService();
+        }
 
-            if (errors.Length > 0)
+        private void SaveService()
+        {
+            if (!Manager.CheckInputData(tbName.Text, tbCost.Text))
             {
-                MessageBox.Show(errors.ToString());
+                MessageBox.Show("Проверьте правильность вводимых данных!",
+                    "Ошибка добавления!", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
 
@@ -66,7 +67,8 @@ namespace AtelierApp.UI
             try
             {
                 AtelierBaseEntities.GetContext().SaveChanges();
-                MessageBox.Show("Информация сохранена!", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Информация сохранена!", "Успешно!",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
                 Manager.MainFrame.GoBack();
             }
             catch (Exception ex)

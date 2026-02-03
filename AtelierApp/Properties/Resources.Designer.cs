@@ -71,6 +71,16 @@ namespace AtelierApp.Properties {
         }
         
         /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] check {
+            get {
+                object obj = ResourceManager.GetObject("check", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap clients {
@@ -127,6 +137,16 @@ namespace AtelierApp.Properties {
             get {
                 object obj = ResourceManager.GetObject("services", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] template {
+            get {
+                object obj = ResourceManager.GetObject("template", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

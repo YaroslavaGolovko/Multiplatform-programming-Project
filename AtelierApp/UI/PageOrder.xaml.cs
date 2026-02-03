@@ -46,7 +46,6 @@ namespace AtelierApp.UI
                 textileCost = 0;
                 serviceCost = 0;
                 newOrder = 1;
-                
             }
             if (rbNotCompleted.IsChecked == true)
             {
@@ -54,10 +53,6 @@ namespace AtelierApp.UI
             }
             DataContext = _currentOrder;
             this.FontFamily = new FontFamily("Cambria");
-            cbClients.ItemsSource = AtelierBaseEntities.GetContext().Client.ToList();
-            cbWorkers.ItemsSource = AtelierBaseEntities.GetContext().Worker.ToList().Where(w => w.IdType == 2);
-            cbTextile.ItemsSource = AtelierBaseEntities.GetContext().Textile.ToList();
-            cbService.ItemsSource = AtelierBaseEntities.GetContext().Service.ToList();
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
@@ -87,7 +82,7 @@ namespace AtelierApp.UI
             try
             {
                 AtelierBaseEntities.GetContext().SaveChanges();
-                MessageBox.Show("Информация сохранена!", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show($"Информация сохранена!", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
                 Manager.MainFrame.GoBack();
             }
             catch (Exception ex)
@@ -106,6 +101,11 @@ namespace AtelierApp.UI
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            AtelierBaseEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(o => o.Reload());
+            cbClients.ItemsSource = AtelierBaseEntities.GetContext().Client.ToList();
+            cbWorkers.ItemsSource = AtelierBaseEntities.GetContext().Worker.ToList().Where(w => w.IdType == 2);
+            cbTextile.ItemsSource = AtelierBaseEntities.GetContext().Textile.ToList();
+            cbService.ItemsSource = AtelierBaseEntities.GetContext().Service.ToList();
             Manager.BtnBack.Visibility = Visibility.Visible;
             if (_currentOrder.Id != 0)
                 Manager.MainTextBlock.Text = "Редактирование заказа за " + textDate.Text;
@@ -155,6 +155,11 @@ namespace AtelierApp.UI
                 serviceCost = service.Cost;
             _currentOrder.Price = textileCost + serviceCost;
             textPrice.Text = (Math.Round(_currentOrder.Price)).ToString();
+        }
+
+        private void btnAddClient_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new PageClient(null));
         }
     }
 }

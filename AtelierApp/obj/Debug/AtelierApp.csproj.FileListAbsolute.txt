@@ -1,0 +1,125 @@
+D:\004_06\AtelierApp\AtelierApp\bin\Debug\AtelierApp.exe.config
+D:\004_06\AtelierApp\AtelierApp\bin\Debug\AtelierApp.exe
+D:\004_06\AtelierApp\AtelierApp\bin\Debug\AtelierApp.pdb
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\App.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\AtelierApp_MarkupCompile.cache
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\AtelierApp_MarkupCompile.lref
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\AtelierApp.g.resources
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\AtelierApp.Properties.Resources.resources
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\AtelierApp.csproj.GenerateResource.cache
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\AtelierApp.csproj.CoreCompileInputs.cache
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\AtelierApp.exe
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\AtelierApp.pdb
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\App.baml
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\AtelierApp.csproj.AssemblyReference.cache
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageMenu.g.cs
+D:\004_06\AtelierApp\AtelierApp\bin\Debug\Services.dll
+D:\004_06\AtelierApp\AtelierApp\bin\Debug\Services.pdb
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageMenu.baml
+D:\004_06\AtelierApp\AtelierApp\bin\Debug\EntityFramework.dll
+D:\004_06\AtelierApp\AtelierApp\bin\Debug\EntityFramework.SqlServer.dll
+D:\004_06\AtelierApp\AtelierApp\bin\Debug\EntityFramework.xml
+D:\004_06\AtelierApp\AtelierApp\bin\Debug\EntityFramework.SqlServer.xml
+D:\004_06\AtelierApp\AtelierApp\bin\Debug\ru\EntityFramework.resources.dll
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UC\ControlOrder.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageListOrders.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\AtelierApp_Content.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UC\ControlOrder.baml
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageListOrders.baml
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\WindowWork.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\WindowWork.baml
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\WindowStart.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\WindowStart.baml
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageOrder.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageOrder.baml
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UC\ControlTextile.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageListTextile.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UC\ControlTextile.baml
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageListTextile.baml
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UC\ControlService.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageDiagramServices.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageListServices.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageService.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageTextile.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UC\ControlService.baml
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageDiagramServices.baml
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageListServices.baml
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageService.baml
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageTextile.baml
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UC\ControlClient.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageListClients.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UC\ControlClient.baml
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageListClients.baml
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageClient.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageClient.baml
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UC\ControlWorker.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageListWorkers.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UC\ControlWorker.baml
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageListWorkers.baml
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageWorker.g.cs
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\UI\PageWorker.baml
+D:\004_06\AtelierApp\AtelierApp\obj\Debug\AtelierApp.csproj.ResolveComReference.cache
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\bin\Debug\AtelierApp.exe.config
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\bin\Debug\AtelierApp.exe
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\bin\Debug\AtelierApp.pdb
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\bin\Debug\EntityFramework.dll
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\bin\Debug\EntityFramework.SqlServer.dll
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\bin\Debug\Services.dll
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\bin\Debug\Services.pdb
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\bin\Debug\EntityFramework.xml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\bin\Debug\EntityFramework.SqlServer.xml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\bin\Debug\ru\EntityFramework.resources.dll
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\AtelierApp.csproj.AssemblyReference.cache
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\AtelierApp.csproj.ResolveComReference.cache
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UC\ControlClient.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UC\ControlOrder.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UC\ControlService.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UC\ControlTextile.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UC\ControlWorker.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageClient.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageDiagramServices.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageListClients.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageListServices.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageListTextile.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageListWorkers.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageOrder.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageService.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageTextile.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageWorker.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\WindowStart.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageListOrders.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageMenu.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\WindowWork.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\App.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\AtelierApp_Content.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\AtelierApp_MarkupCompile.cache
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\AtelierApp_MarkupCompile.lref
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\App.baml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UC\ControlClient.baml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UC\ControlOrder.baml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UC\ControlService.baml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UC\ControlTextile.baml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UC\ControlWorker.baml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageClient.baml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageDiagramServices.baml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageListClients.baml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageListServices.baml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageListTextile.baml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageListWorkers.baml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageOrder.baml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageService.baml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageTextile.baml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageWorker.baml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\WindowStart.baml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageListOrders.baml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\PageMenu.baml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\UI\WindowWork.baml
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\AtelierApp.g.resources
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\AtelierApp.Properties.Resources.resources
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\AtelierApp.csproj.GenerateResource.cache
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\AtelierApp.csproj.CoreCompileInputs.cache
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\AtelierApp.csproj.Up2Date
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\AtelierApp.exe
+D:\сфеду\5 семестр\5 семестр\Мультиплатформенное программирование интеллектуальных систем\AtelierApp\AtelierApp\obj\Debug\AtelierApp.pdb

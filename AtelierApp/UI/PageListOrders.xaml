@@ -50,7 +50,8 @@
                    VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="25" Visibility="Hidden"/>
         <Button Name="btnDelete" HorizontalAlignment="Right" VerticalAlignment="Bottom" Content="Удалить заказ" Click="btnDelete_Click"/>
         <Button Name="btnAdd" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5 5 200 5" Content="Добавить заказ" Click="btnAdd_Click"/>
-        <Button Name="btnCreateReport" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5 5 400 5" Content="Сформировать отчет" Click="btnCreateReport_Click"/>
+        <Button Name="btnCreateCheck" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="5 5 400 5" Content="Сформировать чек" Click="btnCreateCheck_Click"/>
+
 
     </Grid>
 </Page>

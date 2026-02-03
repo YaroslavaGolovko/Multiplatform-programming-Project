@@ -14,39 +14,42 @@ namespace AtelierApp.Data
     using System.Data.Entity.Infrastructure;
     using System.Windows;
 
-    public partial class AtelierEntities : DbContext
+    public partial class AtelierBaseEntities : DbContext
     {
-        private static AtelierEntities _context;
-        public AtelierEntities()
-            : base("name=AtelierEntities")
+        private static AtelierBaseEntities _context;
+
+        public AtelierBaseEntities()
+            : base("name=AtelierBaseEntities")
         {
         }
-
-        private static bool CheckConnection()
+        private static bool CheckConnecting()
         {
             try
             {
-                AtelierEntities db = new AtelierEntities();
-                db.Database.Connection.Open();
+                AtelierBaseEntities atelie = new AtelierBaseEntities();
+                atelie.Database.Connection.Open();
                 return true;
             }
             catch
             {
-                MessageBox.Show("Отсутствует подключение к серверу. Проверьте подключение и повторите попытку позже", "Ошибка подключения", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Отсутствует подключение к серверу.Проверьте подключение и повторите попытку позже!",
+                    "Ошибка подключения", MessageBoxButton.OK, MessageBoxImage.Information);
                 return false;
             }
         }
-        public static AtelierEntities GetContext()
+        public static AtelierBaseEntities GetContext()
         {
-            if (!CheckConnection())
+            if (!CheckConnecting())
             {
                 Environment.Exit(0);
             }
             if (_context == null)
-                _context = new AtelierEntities();
+            {
+                _context = new AtelierBaseEntities();
+            }
             return _context;
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
@@ -56,7 +59,6 @@ namespace AtelierApp.Data
         public virtual DbSet<Gender> Gender { get; set; }
         public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<Service> Service { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Textile> Textile { get; set; }
         public virtual DbSet<TypeOfWorker> TypeOfWorker { get; set; }
         public virtual DbSet<Worker> Worker { get; set; }

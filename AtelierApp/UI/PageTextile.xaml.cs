@@ -87,6 +87,7 @@ namespace AtelierApp.UI
             else
                 Manager.MainTextBlock.Text = "Новая ткань";
             tbCost.Text = (Math.Round(_currentTextile.Cost)).ToString();
+            tbName.Focus();
         }
     }
 }

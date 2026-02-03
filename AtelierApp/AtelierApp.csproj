@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -69,54 +72,46 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Data\BaseModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BaseModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\BaseModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Data\Client.cs">
-      <DependentUpon>ModelBase.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\Gender.cs">
-      <DependentUpon>ModelBase.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\ModelAtelier.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelAtelier.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\ModelAtelier.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelAtelier.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\ModelAtelier.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelAtelier.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Data\ModelBase.cs">
-      <DependentUpon>ModelBase.tt</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Include="Data\ModelBase.Designer.cs">
-      <DependentUpon>ModelBase.edmx</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\Order.cs">
-      <DependentUpon>ModelBase.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\Service.cs">
-      <DependentUpon>ModelBase.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\sysdiagrams.cs">
-      <DependentUpon>ModelBase.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\Textile.cs">
-      <DependentUpon>ModelBase.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\TypeOfWorker.cs">
-      <DependentUpon>ModelBase.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Data\Worker.cs">
-      <DependentUpon>ModelBase.tt</DependentUpon>
+      <DependentUpon>BaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="UC\ControlClient.xaml.cs">
       <DependentUpon>ControlClient.xaml</DependentUpon>
@@ -261,11 +256,6 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -274,17 +264,14 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EntityDeploy Include="Data\ModelAtelier.edmx">
+    <EntityDeploy Include="Data\BaseModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelAtelier.Designer.cs</LastGenOutput>
+      <LastGenOutput>BaseModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <EntityDeploy Include="Data\ModelBase.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelBase.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Data\ModelAtelier.edmx.diagram">
-      <DependentUpon>ModelAtelier.edmx</DependentUpon>
+    <None Include="Data\BaseModel.edmx.diagram">
+      <DependentUpon>BaseModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -295,8 +282,37 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\check.docx" />
     <Resource Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
@@ -313,6 +329,7 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\services.png" />
+    <Resource Include="Resources\template.dotx" />
     <Resource Include="Resources\workers.png" />
     <Resource Include="Resources\textile.png" />
     <Resource Include="Resources\orders.png" />
@@ -323,20 +340,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\ModelAtelier.Context.tt">
+    <Content Include="Data\BaseModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelAtelier.edmx</DependentUpon>
-      <LastGenOutput>ModelAtelier.Context.cs</LastGenOutput>
+      <DependentUpon>BaseModel.edmx</DependentUpon>
+      <LastGenOutput>BaseModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Data\ModelAtelier.tt">
+    <Content Include="Data\BaseModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelAtelier.edmx</DependentUpon>
-      <LastGenOutput>ModelAtelier.cs</LastGenOutput>
-    </Content>
-    <Content Include="Data\ModelBase.tt">
-      <DependentUpon>ModelBase.edmx</DependentUpon>
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelBase.cs</LastGenOutput>
+      <DependentUpon>BaseModel.edmx</DependentUpon>
+      <LastGenOutput>BaseModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

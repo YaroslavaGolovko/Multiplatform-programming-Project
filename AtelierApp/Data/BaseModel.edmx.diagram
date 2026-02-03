@@ -4,21 +4,20 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c6ce22b7e45e437f89c4b474aa978da2" Name="Diagram1" ZoomLevel="83">
-        <EntityTypeShape EntityType="AtelierModel.Client" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="AtelierModel.Gender" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="AtelierModel.Order" Width="1.5" PointX="6.5" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AtelierModel.Service" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AtelierModel.sysdiagrams" Width="1.5" PointX="8" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="AtelierModel.Textile" Width="1.5" PointX="2.875" PointY="6.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="AtelierModel.TypeOfWorker" Width="1.5" PointX="12" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AtelierModel.Worker" Width="1.5" PointX="9.5" PointY="4.875" IsExpanded="true" />
-        <AssociationConnector Association="AtelierModel.FK_Client_Gender" ManuallyRouted="false" />
-        <AssociationConnector Association="AtelierModel.FK_Order_Client" ManuallyRouted="false" />
-        <AssociationConnector Association="AtelierModel.FK_Order_Service" ManuallyRouted="false" />
-        <AssociationConnector Association="AtelierModel.FK_Order_Textile" ManuallyRouted="false" />
-        <AssociationConnector Association="AtelierModel.FK_Order_Worker" ManuallyRouted="false" />
-        <AssociationConnector Association="AtelierModel.FK_Worker_TypeOfWorker" ManuallyRouted="false" />
+      <Diagram DiagramId="8427a84cde5141368fd6b154df323acd" Name="Diagram1">
+        <EntityTypeShape EntityType="AtelierBaseModel.Client" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtelierBaseModel.Gender" Width="1.5" PointX="0.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtelierBaseModel.Order" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtelierBaseModel.Service" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtelierBaseModel.Textile" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtelierBaseModel.TypeOfWorker" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AtelierBaseModel.Worker" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <AssociationConnector Association="AtelierBaseModel.FK_Client_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="AtelierBaseModel.FK_Order_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="AtelierBaseModel.FK_Order_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="AtelierBaseModel.FK_Order_Textile" ManuallyRouted="false" />
+        <AssociationConnector Association="AtelierBaseModel.FK_Order_Worker" ManuallyRouted="false" />
+        <AssociationConnector Association="AtelierBaseModel.FK_Worker_TypeOfWorker" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

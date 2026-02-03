@@ -32,5 +32,22 @@ namespace Services
             }
             return BinaryData;
         }
+
+        public static bool CheckInputData(string name, string cost)
+        {
+            try
+            {
+                int sum = Int32.Parse(cost);
+                if (name.Length < 8)
+                    return false;
+                if (sum <= 0)
+                return false;
+            }
+            catch
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

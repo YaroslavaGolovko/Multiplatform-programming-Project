@@ -31,20 +31,33 @@ namespace AtelierApp.UI
         private void BtnDelete_Click(object sender, RoutedEventArgs e)
         {
             var servicesForRemoving = DGridServices.SelectedItems.Cast<Service>().ToList();
+            int i = 0;
             if (MessageBox.Show($"Вы точно хотите удалить следующие {servicesForRemoving.Count()} элементов?", "Внимание!",
                 MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
             {
-                try
+                foreach (Service item in servicesForRemoving)
                 {
-                    AtelierBaseEntities.GetContext().Service.RemoveRange(servicesForRemoving);
-                    AtelierBaseEntities.GetContext().SaveChanges();
-                    MessageBox.Show("Данные удалены!", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
-                    services = AtelierBaseEntities.GetContext().Service.ToList();
-                    DGridServices.ItemsSource = services;
+                    if (AtelierBaseEntities.GetContext().Order.Where(o => o.IdService == item.Id).ToList().FirstOrDefault() != null)
+                    {
+                        MessageBox.Show("С удаляемыми данными имеются связанные записи в других таблицах.", "Удаление отменено!", MessageBoxButton.OK, MessageBoxImage.Error);
+                        i = 1;
+                        break;
+                    }
                 }
-                catch (Exception ex)
+                if (i == 0)
                 {
-                    MessageBox.Show("С удаляемыми данными имеются связанные записи в других таблицах.", "Удаление отменено!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    try
+                    {
+                        AtelierBaseEntities.GetContext().Service.RemoveRange(servicesForRemoving);
+                        AtelierBaseEntities.GetContext().SaveChanges();
+                        MessageBox.Show("Данные удалены!", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
+                        services = AtelierBaseEntities.GetContext().Service.ToList();
+                        DGridServices.ItemsSource = services;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("При удалении данных возникли неполадки!", "Удаление отменено!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
                 }
             }
         }

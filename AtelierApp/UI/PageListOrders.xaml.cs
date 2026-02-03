@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace AtelierApp.UI
 {
@@ -68,7 +69,7 @@ namespace AtelierApp.UI
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("С удаляемыми данными имеются связанные записи в других таблицах.", "Удаление отменено!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("При удалении данных возникли неполадки!", "Удаление отменено!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
         }
@@ -78,10 +79,6 @@ namespace AtelierApp.UI
             Manager.MainFrame.Navigate(new PageOrder(null));
         }
 
-        private void btnCreateReport_Click(object sender, RoutedEventArgs e)
-        {
-            Services.Manager.ShowMessage();
-        }
 
         private void UpdateDataGrid()
         {
@@ -133,6 +130,78 @@ namespace AtelierApp.UI
                 {
                     DGridOrders.Visibility = Visibility.Visible;
                     tblNoResult.Visibility = Visibility.Hidden;
+                }
+            }
+        }
+
+        private void btnCreateCheck_Click(object sender, RoutedEventArgs e)
+        {
+            var arrayOrders = DGridOrders.SelectedItems.Cast<Order>().ToList();
+            if (arrayOrders.Count == 0)
+            {
+                MessageBox.Show("Необходимо выделить заказы, по которым будут сформированы чеки!", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                int j = 1;
+                foreach (Order order in arrayOrders)
+                {
+                    if (order.IsCompleted == true)
+                    {
+                        var number = order.Id.ToString();
+                        var client = order.Client.LastName.ToString() + " " + order.Client.FirstName.ToString();
+                        var worker = order.Worker.LastName.ToString() + " " + order.Worker.FirstName.ToString();
+                        var service = order.Service.Title.ToString();
+                        var serviceCost = order.Service.Cost.ToString("0.00");
+                        var textile = order.Textile.Title.ToString();
+                        var textileCost = order.Textile.Cost.ToString("0.00");
+                        var regDate = order.RegistrationDate.ToString("MM/dd/yyyy");
+                        string finalDate = order.CompletionDate?.ToString("MM/dd/yyyy");
+                        var sum = order.Price.ToString("0.00");
+                        var admin = AtelierBaseEntities.GetContext().Worker.Where(w => w.Login == Authorization.userLogin).FirstOrDefault();
+                        var adminName = admin.LastName.ToString() + " " + admin.FirstName.ToString();
+                        Word.Application app = new Word.Application();
+                        Word.Document doc = app.Documents.Add(AppDomain.CurrentDomain.BaseDirectory + "..\\..\\" + "Resources/template.dotx");
+                        try
+                        {
+                            object source = "check.docx"; ;
+                            doc.Activate();
+
+                            Word.Bookmarks wBookmarks = doc.Bookmarks;
+                            Word.Range wRange;
+                            int i = 0;
+                            string[] data = new string[11] { adminName, client, sum, finalDate, number, regDate, service, serviceCost, textile, textileCost, worker };
+                            foreach (Word.Bookmark mark in wBookmarks)
+                            {
+                                wRange = mark.Range;
+                                wRange.Text = data[i];
+                                i++;
+                            }
+                            doc.SaveAs2($@"D:\Ателье_Рада_Best_Чеки\чек{order.Client.LastName.ToString()}Заказ№{order.Id}_{j}.pdf", Word.WdExportFormat.wdExportFormatPDF);
+                            app.Visible = true;
+                            Microsoft.Office.Interop.Word.Dialog printDialog = app.Dialogs[Microsoft.Office.Interop.Word.WdWordDialog.wdDialogFilePrint];
+                            if (printDialog.Show() == 1)
+                            {
+                                doc.PrintOut();
+                            }
+                            doc.Close(Microsoft.Office.Interop.Word.WdSaveOptions.wdDoNotSaveChanges);
+
+                            doc = null;
+                        }
+                        catch (Exception ex)
+                        {
+                            doc.Close();
+                            doc = null;
+                            MessageBox.Show("Во время выполнения произошла ошибка!");
+
+                        }
+                        j++;
+                        MessageBox.Show("Чек успешно создан и сохранен на диске D в папке Ателье_Рада_Best_Чеки!");
+                    }
+                    else {
+                        MessageBox.Show("Заказ не является выполненным, поэтому формирование чека недоступно!", "Внимание!", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    Manager.MainFrame.Navigate(new PageListOrders());
                 }
             }
         }
